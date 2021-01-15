@@ -134,6 +134,7 @@ en:
         max_uses: Max number of uses
         new_password: New password
         note: Bio
+        gender: Gender
         otp_attempt: Two-factor code
         password: Password
         phrase: Keyword or phrase

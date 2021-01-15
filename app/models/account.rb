@@ -18,6 +18,7 @@
 #  display_name                  :string           default(""), not null
 #  uri                           :string           default(""), not null
 #  url                           :string
+#  gender                        :string
 #  avatar_file_name              :string
 #  avatar_content_type           :string
 #  avatar_file_size              :integer

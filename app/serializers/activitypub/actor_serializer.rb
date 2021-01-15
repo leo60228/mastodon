@@ -7,13 +7,13 @@ class ActivityPub::ActorSerializer < ActivityPub::Serializer
 
   context_extensions :manually_approves_followers, :featured, :also_known_as,
                      :moved_to, :property_value, :identity_proof,
-                     :discoverable, :olm, :suspended
+                     :discoverable, :olm, :suspended, :gender
 
   attributes :id, :type, :following, :followers,
              :inbox, :outbox, :featured, :featured_tags,
              :preferred_username, :name, :summary,
              :url, :manually_approves_followers,
-             :discoverable
+             :discoverable, :gender
 
   has_one :public_key, serializer: ActivityPub::PublicKeySerializer
 

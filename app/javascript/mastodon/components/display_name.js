@@ -55,7 +55,7 @@ export default class DisplayName extends React.PureComponent {
   render () {
     const { others, localDomain } = this.props;
 
-    let displayName, suffix, account;
+    let displayName, gender, suffix, account;
 
     if (others && others.size > 1) {
       displayName = others.take(2).map(a => <bdi key={a.get('id')}><strong className='display-name__html' dangerouslySetInnerHTML={{ __html: a.get('display_name_html') }} /></bdi>).reduce((prev, cur) => [prev, ', ', cur]);
@@ -76,13 +76,21 @@ export default class DisplayName extends React.PureComponent {
         acct = `${acct}@${localDomain}`;
       }
 
+      let genderText = account.get('gender');
+
       displayName = <bdi><strong className='display-name__html' dangerouslySetInnerHTML={{ __html: account.get('display_name_html') }} /></bdi>;
       suffix      = <span className='display-name__account'>@{acct}</span>;
+
+      if (genderText) {
+        gender = <bdi><strong className='display-name__gender'>{genderText}</strong></bdi>;
+      } else {
+        gender = '';
+      }
     }
 
     return (
       <span className='display-name' ref={this.setRef}>
-        {displayName} {suffix}
+        {displayName} {gender} {suffix}
       </span>
     );
   }

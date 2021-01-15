@@ -1571,9 +1571,17 @@ a.account__display-name {
 
   strong,
   span {
-    display: block;
     text-overflow: ellipsis;
     overflow: hidden;
+  }
+
+  .display-name__gender {
+    padding: 1px;
+    display: inline;
+  }
+
+  .display-name__account {
+    display: block;
   }
 
   strong {
@@ -1710,6 +1718,14 @@ a.account__display-name {
 
 .display-name__account {
   font-size: 14px;
+}
+
+strong.display-name__gender {
+  background: #ffff00;
+  color: $classic-base-color;
+  border-radius: 3px;
+  padding: 2px;
+  display: inline-block;
 }
 
 .status__relative-time,

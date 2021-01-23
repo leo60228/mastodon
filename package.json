@@ -190,8 +190,5 @@
     "sass-lint": "^1.13.1",
     "webpack-dev-server": "^3.11.2",
     "yargs": "^16.2.0"
-  },
-  "resolutions": {
-    "kind-of": "^6.0.3"
   }
 }
